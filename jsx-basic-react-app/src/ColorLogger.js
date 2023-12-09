@@ -1,13 +1,16 @@
 import { useState, useEffect } from 'react'
-
+// ColoerLogger function component
 const ColorLogger = (props) => {
-
+// useState hook to set the color
     const [color, setColor] = useState('')
-
+// useEffect hook to set the color
     useEffect(() => {
+        // set the color to props.color
         setColor(props.color)
-    }, [props.color])
+        
+    }, [props.color]) // only re-run the effect if props.color changes
 
+    // return the color
     return (
         <div>
             <h1>Color Logger</h1>
