@@ -4,7 +4,7 @@ function ColorLogger() {
     const [color, setColor] = useState('red')
 
     useEffect(() =>{
-        console.log('Color changed to: ' + {color})
+        console.log('Color changed to: ' + color)
     },[color]);
 
     return (
