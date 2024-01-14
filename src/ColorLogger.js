@@ -8,16 +8,16 @@ const getRandomColor = () => {
 }
 function ColorLogger() {
     const [color, setColor] = React.useState('green');
-    const handleColorLog = () => {
-        setColor(getRandomColor());
-    }
+    React.useEffect (() => {
+        console.log(`The current color is`, color);
+    }, [color]);
 
     return (
         <div>
-        <button onClick={handleColorLog}>Change Color</button>
+        <button onClick={() => setColor(getRandomColor())}>Change Color</button>
         <p>The current color is {color}</p>
         </div>
     )
-}
+    }
 
 export default ColorLogger;
